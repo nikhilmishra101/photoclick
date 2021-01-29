@@ -4,6 +4,7 @@ import { About, Description, Hide, Image } from "../styles.js";
 //Framer motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
@@ -35,6 +36,7 @@ const AboutSection = () => {
           alt="computer with webstack"
         />
       </Image>
+      <Wave />
     </About>
   );
 };
