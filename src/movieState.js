@@ -34,8 +34,8 @@ export const MovieState = () => {
     {
       title: "Good Times",
       mainImg: goodtimes,
-      secondaryImg: goodtimes2,
       url: "/work/good-times",
+      secondaryImg: goodtimes2,
       awards: [
         {
           title: "Truly A masterpiece",
@@ -57,8 +57,8 @@ export const MovieState = () => {
     {
       title: "The Racer",
       mainImg: theracer,
-      secondaryImg: theracer2,
       url: "/work/the-racer",
+      secondaryImg: theracer2,
       awards: [
         {
           title: "Truly A masterpiece",

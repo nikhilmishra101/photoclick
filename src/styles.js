@@ -17,7 +17,6 @@ export const Description = styled.div`
     font-weight: lighter;
   }
 `;
-
 export const Image = styled.div`
   z-index: 2;
   flex: 1;

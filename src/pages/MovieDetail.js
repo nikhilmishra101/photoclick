@@ -17,6 +17,7 @@ const MovieDetail = () => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
   }, [movies, url]);
+
   return (
     <>
       {movie && (
@@ -26,10 +27,10 @@ const MovieDetail = () => {
           initial="hidden"
           animate="show"
         >
-          <Headline>
+          <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
-          </Headline>
+          </HeadLine>
           <Awards>
             {movie.awards.map((award) => (
               <Award
@@ -51,8 +52,7 @@ const MovieDetail = () => {
 const Details = styled(motion.div)`
   color: white;
 `;
-
-const Headline = styled.div`
+const HeadLine = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
   position: relative;
@@ -68,7 +68,6 @@ const Headline = styled.div`
     object-fit: cover;
   }
 `;
-
 const Awards = styled.div`
   min-height: 80vh;
   display: flex;
@@ -76,7 +75,6 @@ const Awards = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
-
 const AwardStyle = styled.div`
   padding: 5rem;
   h3 {
@@ -92,7 +90,6 @@ const AwardStyle = styled.div`
     padding: 2rem 0rem;
   }
 `;
-
 const ImageDisplay = styled.div`
   min-height: 50vh;
   img {

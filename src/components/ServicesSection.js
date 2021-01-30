@@ -27,36 +27,36 @@ const ServicesSection = () => {
         <Cards>
           <Card>
             <div className="icon">
-              <img alt="icon_clock" src={clock} />
+              <img alt="icon" src={clock} />
               <h3>Efficient</h3>
             </div>
-            <p>Lorem ipsum color sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
             <div className="icon">
-              <img alt="icon_teamwork" src={teamwork} />
+              <img alt="icon" src={teamwork} />
               <h3>Teamwork</h3>
             </div>
-            <p>Lorem ipsum color sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
             <div className="icon">
-              <img alt="icon_diaphragm" src={diaphragm} />
+              <img alt="icon" src={diaphragm} />
               <h3>Diaphragm</h3>
             </div>
-            <p>Lorem ipsum color sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
           <Card>
             <div className="icon">
-              <img alt="icon_money" src={money} />
+              <img alt="icon" src={money} />
               <h3>Affordable</h3>
             </div>
-            <p>Lorem ipsum color sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </Card>
         </Cards>
       </Description>
       <Image>
-        <img src={home2} alt="computer_screen" />
+        <img alt="camera" src={home2} />
       </Image>
     </Services>
   );
@@ -71,7 +71,6 @@ const Services = styled(About)`
     padding: 2rem 0rem 4rem 0rem;
   }
 `;
-
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;

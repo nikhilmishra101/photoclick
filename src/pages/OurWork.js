@@ -14,11 +14,21 @@ import {
   fade,
   photoAnim,
   lineAnim,
+  swoopAdoop,
 } from "../animation";
+import { useScroll } from "../components/useScroll";
 
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
-    <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+    <Work
+      style={{ background: "#fff" }}
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -34,16 +44,23 @@ const OurWork = () => {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
+
+      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
           <img src={theracer} alt="theracer" />
         </Link>
       </Movie>
-      <Movie>
+
+      <Movie
+        ref={element2}
+        variants={fade}
+        animate={controls2}
+        initial="hidden"
+      >
         <h2>Good Times</h2>
-        <div className="line"></div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
           <img src={goodtimes} alt="goodtimes" />
         </Link>
@@ -55,15 +72,15 @@ const OurWork = () => {
 const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
-  background: white;
   padding: 5rem 10rem;
+
   h2 {
     padding: 1rem 0rem;
   }
 `;
-
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
+
   .line {
     height: 0.5rem;
     background: #23d997;
@@ -75,7 +92,6 @@ const Movie = styled.div`
     object-fit: cover;
   }
 `;
-
 const Hide = styled.div`
   overflow: hidden;
 `;
@@ -90,7 +106,6 @@ const Frame1 = styled(motion.div)`
   background: #fffebf;
   z-index: 2;
 `;
-
 const Frame2 = styled(Frame1)`
   background: #ff8efb;
 `;
