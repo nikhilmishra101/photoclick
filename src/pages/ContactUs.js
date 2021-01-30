@@ -22,13 +22,13 @@ const ContactUs = () => {
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Send Us a Message</h2>
+            <h2>Send Us A Message</h2>
           </Social>
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
             <Circle />
-            <h2>Send an email</h2>
+            <h2>Send an email.</h2>
           </Social>
         </Hide>
         <Hide>
@@ -51,7 +51,6 @@ const ContactStyle = styled(motion.div)`
     font-size: 1rem;
   }
 `;
-
 const Title = styled.div`
   margin-bottom: 4rem;
   color: black;
@@ -59,18 +58,15 @@ const Title = styled.div`
     margin-top: 5rem;
   }
 `;
-
 const Hide = styled.div`
   overflow: hidden;
 `;
-
 const Circle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
   background: #353535;
 `;
-
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;

@@ -82,9 +82,9 @@ const StyledNav = styled.nav`
       padding: 2rem;
       justify-content: space-around;
       width: 100%;
-    }
-    li {
-      padding: 0;
+      li {
+        padding: 0;
+      }
     }
   }
 `;
