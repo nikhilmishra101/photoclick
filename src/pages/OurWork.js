@@ -15,12 +15,9 @@ import {
   photoAnim,
   lineAnim,
 } from "../animation";
-import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
   return (
     <Work
       style={{ background: "#fff" }}
@@ -45,7 +42,7 @@ const OurWork = () => {
         </Link>
       </Movie>
 
-      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
+      <Movie>
         <h2>The Racer</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
@@ -53,12 +50,7 @@ const OurWork = () => {
         </Link>
       </Movie>
 
-      <Movie
-        ref={element2}
-        variants={fade}
-        animate={controls2}
-        initial="hidden"
-      >
+      <Movie>
         <h2>Good Times</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
